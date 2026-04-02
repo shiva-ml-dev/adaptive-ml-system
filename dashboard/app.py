@@ -1,50 +1,23 @@
 import streamlit as st
 import pandas as pd
-import requests
 import os
+import requests
 
-# -----------------------------
-# Title
-# -----------------------------
 st.title("Adaptive ML Dashboard")
 
-# -----------------------------
-# Load Data
-# -----------------------------
-file_path = "logs/predictions.csv"
+file = "logs/predictions.csv"
+df = pd.read_csv(file) if os.path.exists(file) else pd.DataFrame()
 
-if os.path.exists(file_path):
-    df = pd.read_csv(file_path)
-else:
-    df = pd.DataFrame(columns=["feature1", "feature2", "prediction", "actual"])
-
-# -----------------------------
-# Latest Data
-# -----------------------------
 st.subheader("Latest Data")
+st.dataframe(df.tail() if not df.empty else df)
 
-if df.empty:
-    st.write("No data available yet")
-else:
-    st.dataframe(df.tail())
-
-# -----------------------------
-# Accuracy (CORRECT)
-# -----------------------------
 st.subheader("Accuracy")
-
-if not df.empty and "prediction" in df.columns:
-    if "actual" in df.columns:
-        acc = (df["prediction"] == df["actual"]).mean()
-        st.write(round(acc, 2))
-    else:
-        st.write("No actual data")
+if not df.empty and "actual" in df:
+    acc = (df["prediction"] == df["actual"]).mean()
+    st.write(round(acc, 2))
 else:
-    st.write("0")
+    st.write("No data")
 
-# -----------------------------
-# Live Prediction
-# -----------------------------
 st.subheader("Live Prediction")
 
 f1 = st.number_input("Feature1", 0)
@@ -52,10 +25,10 @@ f2 = st.number_input("Feature2", 0)
 
 if st.button("Predict"):
     try:
-        res = requests.post(
-            "https://adaptive-ml-system-1.onrender.com/predict",
+        r = requests.post(
+            "https://adaptive-ml-system-api.onrender.com/predict",
             json={"feature1": f1, "feature2": f2}
         )
-        st.success(res.json())
+        st.success(r.json())
     except:
         st.error("API error")
