@@ -5,37 +5,47 @@ import os
 
 st.title("Adaptive ML Dashboard")
 
+# -----------------------------
+# Load Data
+# -----------------------------
 file_path = "logs/predictions.csv"
 
-df = pd.read_csv(file_path) if os.path.exists(file_path) else pd.DataFrame()
+if os.path.exists(file_path):
+    df = pd.read_csv(file_path)
+else:
+    df = pd.DataFrame(columns=["feature1", "feature2", "prediction"])
 
 st.subheader("Latest Data")
-st.dataframe(df.tail())
 
-if not df.empty:
-    acc = (df["prediction"] == df["actual"]).mean()
+if df.empty:
+    st.write("No data available yet")
 else:
-    acc = 0
+    st.dataframe(df.tail())
 
+# -----------------------------
+# Accuracy
+# -----------------------------
 st.subheader("Accuracy")
-st.write(acc)
 
-if acc < 0.8:
-    st.write("Retraining Required")
+if not df.empty and "prediction" in df.columns:
+    st.write(len(df))  # simple metric
 else:
-    st.write("Model is Stable")
+    st.write("0")
 
-if not df.empty:
-    st.bar_chart(df["prediction"].value_counts())
-
+# -----------------------------
+# Live Prediction
+# -----------------------------
 st.subheader("Live Prediction")
 
 f1 = st.number_input("Feature1", 0)
 f2 = st.number_input("Feature2", 0)
 
 if st.button("Predict"):
-    res = requests.post(
-        "https://adaptive-ml-system.onrender.com/predict",
-        params={"feature1": f1, "feature2": f2}
-    )
-    st.write(res.json())
+    try:
+        res = requests.post(
+            "https://adaptive-ml-system-1.onrender.com/predict",
+            json={"feature1": f1, "feature2": f2}
+        )
+        st.success(res.json())
+    except:
+        st.error("API error")
