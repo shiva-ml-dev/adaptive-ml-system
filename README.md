@@ -1,4 +1,4 @@
-Adaptive ML Monitoring and Retraining System
+Adaptive Machine Learning Monitoring and Auto-Retraining System
 
 ![Python](https://img.shields.io/badge/Python-3.10-blue)
 ![FastAPI](https://img.shields.io/badge/FastAPI-Live-green)
