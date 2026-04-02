@@ -109,15 +109,17 @@ adaptive-ml-system/
 5. Dashboard displays system status
 
 ---
+  
+## 📸 Dashboard Demo
 
-📊 Dashboard Demo
+### 🖥️ Main Dashboard
+![Dashboard](screenshots/dashboard.png)
 
-- Latest Data Table
-- Prediction vs Actual
-- Accuracy Display
-- Live Prediction Input
+### 📊 Accuracy Monitoring
+![Accuracy](screenshots/accuracy.png)
 
-(Add screenshots here)
+### 🔮 Prediction Output
+![Prediction](screenshots/prediction.png)
 
 ---
 
