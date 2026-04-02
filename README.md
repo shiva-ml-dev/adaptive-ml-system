@@ -1,8 +1,8 @@
 🚀 Adaptive ML Monitoring & Retraining System
 
-"Python" (https://img.shields.io/badge/Python-3.10-blue)
-"FastAPI" (https://img.shields.io/badge/FastAPI-Live-green)
-"Streamlit" (https://img.shields.io/badge/Streamlit-Deployed-red)
+![Python](https://img.shields.io/badge/Python-3.10-blue)
+![FastAPI](https://img.shields.io/badge/FastAPI-Live-green)
+![Streamlit](https://img.shields.io/badge/Streamlit-Deployed-red)
 
 ---
 
