@@ -40,19 +40,16 @@ How it Works
 3. If accuracy < 0.8, retraining is triggered
 4. Dashboard displays performance and status
 
-Dashboard Preview
+## 📸 Dashboard Preview
 
-Main Dashboard
+### 🖥 Main Dashboard
+![Dashboard](screenshots/dashboard.png)
 
-"Dashboard" (screenshots/dashboard.png)
+### 📈 Accuracy & Retraining Trigger
+![Accuracy](screenshots/accuracy.png)
 
-Accuracy & Retraining Trigger
-
-"Accuracy" (screenshots/accuracy.png)
-
-Prediction Distribution
-
-"Chart" (screenshots/chart.png)
+### 📊 Prediction Distribution
+![Chart](screenshots/chart.png)
 
 Run Project
 
