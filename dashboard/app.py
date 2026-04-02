@@ -1,42 +1,41 @@
 import streamlit as st
 import pandas as pd
-import time
+import requests
+import os
 
-st.title("Adaptive ML Monitoring Dashboard")
+st.title("Adaptive ML Dashboard")
 
-# Load data
 file_path = "logs/predictions.csv"
 
-def get_data():
-    return pd.read_csv(file_path)
+df = pd.read_csv(file_path) if os.path.exists(file_path) else pd.DataFrame()
 
-def get_accuracy():
-    df = get_data()
-    return (df["prediction"] == df["actual"]).mean()
-
-# Get data
-df = get_data()
-
-# Show data
 st.subheader("Latest Data")
 st.dataframe(df.tail())
 
-# Accuracy
-accuracy = get_accuracy()
-
-st.subheader("Model Accuracy")
-st.write(f"Accuracy: {accuracy:.2f}")
-
-# Retraining status
-if accuracy < 0.8:
-    st.error("Retraining Required")
+if not df.empty:
+    acc = (df["prediction"] == df["actual"]).mean()
 else:
-    st.success("Model is Stable")
+    acc = 0
 
-# Prediction distribution
-st.subheader("Prediction Distribution")
-st.bar_chart(df["prediction"].value_counts())
+st.subheader("Accuracy")
+st.write(acc)
 
-# Auto refresh every 5 seconds
-time.sleep(5)
-st.rerun()
+if acc < 0.8:
+    st.write("Retraining Required")
+else:
+    st.write("Model is Stable")
+
+if not df.empty:
+    st.bar_chart(df["prediction"].value_counts())
+
+st.subheader("Live Prediction")
+
+f1 = st.number_input("Feature1", 0)
+f2 = st.number_input("Feature2", 0)
+
+if st.button("Predict"):
+    res = requests.post(
+        "https://adaptive-ml-system.onrender.com/predict",
+        params={"feature1": f1, "feature2": f2}
+    )
+    st.write(res.json())

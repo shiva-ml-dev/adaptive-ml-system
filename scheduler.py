@@ -1,5 +1,6 @@
 import time
 import schedule
+import os
 
 # flag to avoid repeated retraining
 already_retrained = False
@@ -15,8 +16,13 @@ def job():
     global already_retrained
 
     print("Checking model performance...")
-    accuracy = calculate_accuracy(file_path)
 
+    # file exists check
+    if not os.path.exists(file_path):
+        print("No data found yet...")
+        return
+
+    accuracy = calculate_accuracy(file_path)
     print(f"Accuracy: {accuracy}")
 
     if accuracy < 0.8 and not already_retrained:

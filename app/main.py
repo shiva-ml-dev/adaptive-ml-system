@@ -2,6 +2,7 @@ from fastapi import FastAPI
 import joblib
 import os
 from datetime import datetime
+import pandas as pd
 
 app = FastAPI()
 
@@ -28,17 +29,24 @@ def predict(feature1: float, feature2: float):
         else:
             prediction = int(pred)
 
-        # File path
-        file_path = "data/data.csv"
+        # Logging
+        log_data = {
+            "feature1": feature1,
+            "feature2": feature2,
+            "prediction": prediction,
+            "timestamp": datetime.now()
+        }
 
-        # Create file if not exists
-        if not os.path.exists(file_path):
-            with open(file_path, "w") as f:
-                f.write("feature1,feature2,prediction,timestamp\n")
+        df = pd.DataFrame([log_data])
 
-        # Append data
-        with open(file_path, "a") as f:
-            f.write(f"{feature1},{feature2},{prediction},{datetime.now()}\n")
+        # Create logs folder if not exists
+        if not os.path.exists("logs"):
+            os.makedirs("logs")
+
+        try:
+            df.to_csv("logs/predictions.csv", mode='a', header=False, index=False)
+        except:
+            df.to_csv("logs/predictions.csv", index=False)
 
         return {"prediction": prediction}
 
