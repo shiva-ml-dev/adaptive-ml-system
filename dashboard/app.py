@@ -3,6 +3,9 @@ import pandas as pd
 import requests
 import os
 
+# -----------------------------
+# Title
+# -----------------------------
 st.title("Adaptive ML Dashboard")
 
 # -----------------------------
@@ -13,8 +16,11 @@ file_path = "logs/predictions.csv"
 if os.path.exists(file_path):
     df = pd.read_csv(file_path)
 else:
-    df = pd.DataFrame(columns=["feature1", "feature2", "prediction"])
+    df = pd.DataFrame(columns=["feature1", "feature2", "prediction", "actual"])
 
+# -----------------------------
+# Latest Data
+# -----------------------------
 st.subheader("Latest Data")
 
 if df.empty:
@@ -23,12 +29,16 @@ else:
     st.dataframe(df.tail())
 
 # -----------------------------
-# Accuracy
+# Accuracy (CORRECT)
 # -----------------------------
 st.subheader("Accuracy")
 
 if not df.empty and "prediction" in df.columns:
-    st.write(len(df))  # simple metric
+    if "actual" in df.columns:
+        acc = (df["prediction"] == df["actual"]).mean()
+        st.write(round(acc, 2))
+    else:
+        st.write("No actual data")
 else:
     st.write("0")
 
