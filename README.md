@@ -50,12 +50,6 @@ Response:
 
 ---
 
-🔥 Streamlit Dashboard
-
-👉 (Add your Streamlit link here)
-
----
-
 🧠 System Architecture
 
 User → Streamlit Dashboard → FastAPI API → ML Model
