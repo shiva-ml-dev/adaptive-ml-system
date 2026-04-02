@@ -26,8 +26,8 @@ f2 = st.number_input("Feature2", 0)
 if st.button("Predict"):
     try:
         r = requests.post(
-            "https://adaptive-ml-system-api.onrender.com/predict",
-            params={"feature1": f1, "feature2": f2}
+            "https://adaptive-ml-system-7.onrender.com/predict",
+            json={"feature1": f1, "feature2": f2}
         )
 
         result = r.json()
