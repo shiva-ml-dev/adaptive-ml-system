@@ -125,12 +125,16 @@ streamlit run dashboard/app.py
 
 ---
 
-Author
+## Author
 
-Shiva
+Shivashankar Kakanale  
+Machine Learning Engineer | Building Production-Ready ML Systems  
+Seeking ML Internships and Entry-Level Opportunities  
 
----
+GitHub: https://github.com/shiva-ml-dev  
+LinkedIn: https://www.linkedin.com/in/shivashankar-kakanale-2a337329a  
+Email: kakanaleshivashankar0@gmail.com
 
-Support
 
-If you like this project, consider giving it a star on GitHub.
+
+
