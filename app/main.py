@@ -1,54 +1,45 @@
 from fastapi import FastAPI
-import joblib
-import os
-from datetime import datetime
-import pandas as pd
+import threading
+import time
+from monitoring.performance import calculate_accuracy
+from retraining.retrain import retrain_model
 
 app = FastAPI()
 
-# Load model
-model = joblib.load("models/model.pkl")
-
-
+# API
 @app.get("/")
 def home():
-    return {"message": "Adaptive ML System is running"}
-
+    return {"message": "API running"}
 
 @app.post("/predict")
-def predict(feature1: float, feature2: float):
+def predict(data: dict):
+    f1 = data.get("feature1", 0)
+    f2 = data.get("feature2", 0)
+    prediction = 1 if (f1 + f2) > 5 else 0
+    return {"prediction": prediction}
 
-    try:
-        # Model prediction
-        input_data = [[feature1, feature2]]
-        pred = model.predict(input_data)
 
-        # Safe prediction extraction
-        if hasattr(pred, "__len__"):
-            prediction = int(pred[0])
-        else:
-            prediction = int(pred)
+# Scheduler
+def scheduler():
+    file_path = "logs/predictions.csv"
 
-        # Logging
-        log_data = {
-            "feature1": feature1,
-            "feature2": feature2,
-            "prediction": prediction,
-            "timestamp": datetime.now()
-        }
-
-        df = pd.DataFrame([log_data])
-
-        # Create logs folder if not exists
-        if not os.path.exists("logs"):
-            os.makedirs("logs")
-
+    while True:
         try:
-            df.to_csv("logs/predictions.csv", mode='a', header=False, index=False)
-        except:
-            df.to_csv("logs/predictions.csv", index=False)
+            acc = calculate_accuracy(file_path)
 
-        return {"prediction": prediction}
+            if acc is not None:
+                print("Accuracy:", acc)
 
-    except Exception as e:
-        return {"error": str(e)}
+                if acc < 0.8:
+                    print("Retraining...")
+                    retrain_model()
+        except Exception as e:
+            print("Error:", e)
+
+        time.sleep(60)
+
+
+# Run scheduler on startup
+@app.on_event("startup")
+def start():
+    threading.Thread(target=scheduler, daemon=True).start()

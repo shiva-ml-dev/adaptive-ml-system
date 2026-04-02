@@ -27,8 +27,11 @@ if st.button("Predict"):
     try:
         r = requests.post(
             "https://adaptive-ml-system-api.onrender.com/predict",
-            json={"feature1": f1, "feature2": f2}
+            params={"feature1": f1, "feature2": f2}
         )
-        st.success(r.json())
+
+        result = r.json()
+        st.success(f"Prediction: {result['prediction']}")
+
     except:
         st.error("API error")
