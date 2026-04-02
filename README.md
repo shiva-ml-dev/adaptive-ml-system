@@ -19,32 +19,31 @@ Built with a production-style architecture using FastAPI and Streamlit.
 
 ---
 
-Live Demo
+## Live Demo
 
-Streamlit Dashboard
-
-"Open Live Dashboard" (https://adaptive-ml-system-ptkbbf7euu2cd3mg55hn52.streamlit.app)
+Streamlit Dashboard:
+[Open Live Dashboard](https://adaptive-ml-system-ptkbbf7euu2cd3mg55hn52.streamlit.app)
 
 FastAPI
 
-API Base URL: https://adaptive-ml-system-7.onrender.com
-API Docs: https://adaptive-ml-system-7.onrender.com/docs
+API Base URL:
+https://adaptive-ml-system-7.onrender.com
+
+API Docs:
+https://adaptive-ml-system-7.onrender.com/docs
 
 ---
 
-Dashboard Demo
+## Dashboard Demo
 
-Main Dashboard
+### Main Dashboard
+![Dashboard](screenshots/dashboard.png)
 
-"Dashboard" (screenshots/dashboard.png)
+### Accuracy Monitoring
+![Accuracy](screenshots/accuracy.png)
 
-Accuracy Monitoring
-
-"Accuracy" (screenshots/accuracy.png)
-
-Live Prediction
-
-"Prediction" (screenshots/prediction.png)
+### Live Prediction
+![Prediction](screenshots/prediction.png)
 
 ---
 
