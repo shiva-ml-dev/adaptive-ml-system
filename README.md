@@ -24,15 +24,12 @@ Built with a production-style architecture using FastAPI and Streamlit.
 Streamlit Dashboard:
 [Open Live Dashboard](https://adaptive-ml-system-ptkbbf7euu2cd3mg55hn52.streamlit.app)
 
-FastAPI
-
-API Base URL:
+FastAPI API:
 https://adaptive-ml-system-7.onrender.com
 
-API Docs:
+API Documentation:
 https://adaptive-ml-system-7.onrender.com/docs
 
----
 
 ## Dashboard Demo
 
