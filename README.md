@@ -26,6 +26,9 @@ This project implements an end-to-end adaptive machine learning system that:
 👉 https://adaptive-ml-system-7.onrender.com
 👉 https://adaptive-ml-system-7.onrender.com/docs
 
+🔥 Streamlit Dashboard (Live UI)
+
+👉 https://adaptive-ml-system-ptkbbf7euu2cd3mg55hn52.streamlit.app
 ---
 
 🔥 Prediction Endpoint
