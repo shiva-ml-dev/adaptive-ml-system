@@ -2,10 +2,10 @@
 
 A production-ready self-improving ML system with real-time monitoring, drift detection, and automated retraining.
 
-"Python" (https://img.shields.io/badge/Python-3.10-blue)
-"FastAPI" (https://img.shields.io/badge/FastAPI-Backend-green)
-"Streamlit" (https://img.shields.io/badge/Streamlit-UI-red)
-"Status" (https://img.shields.io/badge/Status-Deployed-success)
+![Python](https://img.shields.io/badge/Python-3.10-blue)
+![FastAPI](https://img.shields.io/badge/FastAPI-Backend-green)
+![Streamlit](https://img.shields.io/badge/Streamlit-UI-red)
+![Status](https://img.shields.io/badge/Status-Deployed-success)
 
 ---
 
@@ -76,19 +76,16 @@ Prediction Logs (CSV / Database)
 
 ---
 
-📊 Dashboard Demo
+## 📊 Dashboard Demo
 
-Latest Data
+### Latest Data
+![Latest Data](screenshots/dashboard.png)
 
-"Latest Data" (screenshots/dashboard.png)
+### Accuracy Monitoring
+![Accuracy](screenshots/accuracy.png)
 
-Accuracy Monitoring
-
-"Accuracy" (screenshots/accuracy.png)
-
-Live Prediction
-
-"Prediction" (screenshots/prediction.png)
+### Live Prediction
+![Prediction](screenshots/prediction.png)
 
 ---
 
