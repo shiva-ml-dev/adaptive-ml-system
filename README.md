@@ -77,7 +77,7 @@ This architecture enables real-time prediction, continuous monitoring, and autom
 - Automated retraining triggered based on performance drop  
 - End-to-end ML pipeline deployed and functioning in production environment
 
-  
+---
 Features
 
 - Real-time prediction API
