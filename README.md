@@ -57,20 +57,15 @@ https://adaptive-ml-system-7.onrender.com/docs
 ## 🏗️ System Architecture
 
 User  
-↓  
-Streamlit Dashboard (UI)  
-↓  
-FastAPI Backend (API)  
-↓  
-Machine Learning Model (Prediction)  
-↓  
-Prediction Logging (CSV / Database)  
-↓  
-Monitoring System (Accuracy & Drift Detection)  
-↓  
-Retraining Trigger (Scheduler / Pipeline)  
-↓  
-Updated Model Deployment
+→ **Streamlit Dashboard (UI)**  
+→ **FastAPI Backend (API)**  
+→ **Machine Learning Model (Prediction)**  
+→ Prediction Logging (CSV / Database)  
+→ **Monitoring System (Accuracy & Drift Detection)**  
+→ Retraining Trigger (Scheduler / Pipeline)  
+→ Updated Model Deployment  
+
+This architecture enables real-time prediction, continuous monitoring, and automated model retraining to maintain performance in production environments.
 
 ---
 
