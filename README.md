@@ -4,6 +4,16 @@ Adaptive Machine Learning Monitoring and Auto-Retraining System
 ![FastAPI](https://img.shields.io/badge/FastAPI-Live-green)
 ![Streamlit](https://img.shields.io/badge/Streamlit-Deployed-red)
 
+## 🎯 Problem Statement
+
+Machine learning models deployed in real-world environments often experience performance degradation over time due to data drift and changing data patterns. This leads to reduced accuracy and unreliable predictions in production systems.
+
+Most traditional ML systems lack continuous monitoring, performance tracking, and automated retraining mechanisms, making it difficult to maintain model effectiveness without manual intervention.
+
+## 💡 Solution
+
+To address this problem, I developed a production-ready adaptive machine learning system that performs real-time predictions, continuously monitors model performance, detects potential drift, and automatically triggers retraining to ensure sustained accuracy and reliability in dynamic environments.
+
 ---
 
 Overview
