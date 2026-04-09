@@ -138,6 +138,12 @@ Actual 1| 6| 44
 
 ---
 
+## 🧠 Model Selection
+
+A Random Forest model was used due to its robustness, ability to handle non-linear patterns, and strong performance on tabular data. It provides reliable predictions with minimal overfitting, making it suitable for real-world production systems.
+
+---
+
 ## 🎯 Use Case
 
 - 🏭 Production ML Systems (MLOps)  
