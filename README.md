@@ -138,6 +138,13 @@ Actual 1| 6| 44
 
 ---
 
+## 🎯 Use Case
+
+- 🏭 Production ML Systems (MLOps)  
+  This system is designed for real-world production environments where machine learning models require continuous monitoring, drift detection, and automatic retraining to maintain performance over time.
+
+  ---
+  
 ⚙️ Features
 
 - Real-time prediction using FastAPI
