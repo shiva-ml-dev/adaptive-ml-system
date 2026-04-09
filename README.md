@@ -56,29 +56,27 @@ https://adaptive-ml-system-7.onrender.com/docs
 
 ## 🏗️ System Architecture
 
-```mermaid
-flowchart TD
-A --> B
-B --> C
-C --> D
-D --> E
-D --> F
-F --> G
-G --> H
-H --> I
-I --> J
-J --> C
+User  
+↓  
+Streamlit Dashboard (UI)  
+↓  
+FastAPI Backend (API)  
+↓  
+Machine Learning Model (Prediction)  
+↓  
+Prediction Output  
 
-A[User]
-B[Streamlit UI]
-C[FastAPI API]
-D[ML Model]
-E[Prediction Output]
-F[Logging]
-G[Monitoring]
-H{Drop}
-I[Retrain]
-J[Deploy]
+Machine Learning Model  
+↓  
+Prediction Logging (CSV / Database)  
+↓  
+Monitoring System (Accuracy & Drift Detection)  
+↓  
+Retraining Trigger (Scheduler / Pipeline)  
+↓  
+Updated Model Deployment  
+↓  
+FastAPI Backend (API)
     
 
 ---
