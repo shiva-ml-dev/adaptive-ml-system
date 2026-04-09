@@ -54,7 +54,6 @@ https://adaptive-ml-system-7.onrender.com/docs
 
 ---
 
-```md
 ## 🏗️ System Architecture
 
 ```mermaid
@@ -73,7 +72,7 @@ flowchart TD
     J --> C
 
     H -- No --> C
-
+    
 
 ---
 
