@@ -58,14 +58,14 @@ https://adaptive-ml-system-7.onrender.com/docs
 
 ```mermaid
 flowchart TD
-    A[User] --> B[Streamlit Dashboard (UI)]
-    B --> C[FastAPI Backend (API)]
+    A[User] --> B[Streamlit Dashboard UI]
+    B --> C[FastAPI Backend API]
     C --> D[Machine Learning Model]
     D --> E[Prediction Output]
 
-    D --> F[Prediction Logging (CSV / DB)]
-    F --> G[Monitoring System (Accuracy & Drift)]
-    G --> H{Performance Drop?}
+    D --> F[Prediction Logging CSV or DB]
+    F --> G[Monitoring System Accuracy and Drift]
+    G --> H{Performance Drop}
 
     H -- Yes --> I[Retraining Pipeline]
     I --> J[Updated Model Deployment]
