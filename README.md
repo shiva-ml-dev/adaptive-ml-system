@@ -69,6 +69,15 @@ This architecture enables real-time prediction, continuous monitoring, and autom
 
 ---
 
+## 📈 System Performance
+
+- Real-time predictions successfully implemented via FastAPI  
+- Continuous accuracy monitoring enabled  
+- Drift detection mechanism identifies performance degradation  
+- Automated retraining triggered based on performance drop  
+- End-to-end ML pipeline deployed and functioning in production environment
+
+  
 Features
 
 - Real-time prediction API
