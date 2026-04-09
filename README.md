@@ -35,7 +35,7 @@ It transforms a static ML model into a self-improving intelligent system suitabl
 
 🔗 Live Demo
 
-- Streamlit Dashboard: https://your-streamlit-link
+- Streamlit Dashboard: https://adaptive-ml-system-ptkbbf7euu2cd3mg55hn52.streamlit.app
 - FastAPI API: https://adaptive-ml-system-7.onrender.com
 - API Docs: https://adaptive-ml-system-7.onrender.com/docs
 
@@ -198,7 +198,7 @@ adaptive-ml-system/
 
 🔗 Live Demo (Quick Access)
 
-- Streamlit Dashboard: https://your-streamlit-link
+- Streamlit Dashboard:https://adaptive-ml-system-ptkbbf7euu2cd3mg55hn52.streamlit.app
 - FastAPI API: https://adaptive-ml-system-7.onrender.com
 - API Docs: https://adaptive-ml-system-7.onrender.com/docs
 
@@ -217,6 +217,10 @@ streamlit run dashboard/app.py
 Shivashankar Kakanale
 Machine Learning Engineer
 
+Actively seeking Machine Learning Internship and Entry-Level Opportunities
+
 - GitHub: https://github.com/shiva-ml-dev
 - LinkedIn: https://www.linkedin.com/in/shivashankar-kakanale-2a337329a
 - Email: kakanaleshivashankar@gmail.com
+
+
