@@ -56,27 +56,15 @@ https://adaptive-ml-system-7.onrender.com/docs
 
 ## 🏗️ System Architecture
 
-User  
-↓  
-Streamlit Dashboard (UI)  
-↓  
-FastAPI Backend (API)  
-↓  
-Machine Learning Model (Prediction)  
-↓  
-Prediction Output  
+![Architecture](images/architecture.png)
 
-Machine Learning Model  
-↓  
-Prediction Logging (CSV / Database)  
-↓  
-Monitoring System (Accuracy & Drift Detection)  
-↓  
-Retraining Trigger (Scheduler / Pipeline)  
-↓  
-Updated Model Deployment  
-↓  
-FastAPI Backend (API)
+## 📊 Dashboard
+
+![Dashboard](images/dashboard.png)
+
+## ⚡ Live Prediction
+
+![Prediction](images/prediction.png)
     
 
 ---
