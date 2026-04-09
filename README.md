@@ -54,6 +54,22 @@ https://adaptive-ml-system-7.onrender.com/docs
 
 ---
 
+## 📊 Model Performance
+
+- Accuracy: 91%
+- Precision: 89%
+- Recall: 87%
+- F1 Score: 88%
+
+### Confusion Matrix
+
+|                | Predicted 0 | Predicted 1 |
+|----------------|------------|------------|
+| Actual 0       | 45         | 5          |
+| Actual 1       | 6          | 44         |
+
+---
+
 ## 🏗️ System Architecture
 
 User  
