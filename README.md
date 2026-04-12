@@ -41,6 +41,8 @@ It transforms a static ML model into a self-improving intelligent system suitabl
 
 ---
 
+## 🏗️ System Architecture
+
 ```mermaid
 graph LR
     User --> Streamlit_Dashboard
@@ -55,7 +57,6 @@ graph LR
     Auto_Retraining --> Model_Deployment
     Model_Deployment --> FastAPI_Backend
 ```
-
 ---
 
 🔄 How It Works
