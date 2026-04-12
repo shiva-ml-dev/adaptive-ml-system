@@ -42,23 +42,18 @@ It transforms a static ML model into a self-improving intelligent system suitabl
 ---
 
 ```mermaid
-flowchart LR
+graph LR
+    User --> Streamlit_Dashboard
+    Streamlit_Dashboard --> FastAPI_Backend
+    FastAPI_Backend --> ML_Model
+    ML_Model --> Prediction_Output
 
-    %% Real-Time Prediction
-    A[User] --> B[Streamlit Dashboard]
-    B --> C[FastAPI Backend]
-    C --> D[ML Model]
-    D --> E[Prediction Output]
-
-    %% Monitoring Pipeline
-    D --> F[Prediction Logs]
-    F --> G[Performance Monitoring]
-    G --> H[Data Drift Detection]
-    H --> I[Automated Retraining]
-    I --> J[Model Deployment]
-
-    %% Feedback Loop
-    J --> D
+    ML_Model --> Prediction_Logs
+    Prediction_Logs --> Performance_Monitoring
+    Performance_Monitoring --> Data_Drift_Detection
+    Data_Drift_Detection --> Auto_Retraining
+    Auto_Retraining --> Model_Deployment
+    Model_Deployment --> FastAPI_Backend
 ```
 
 ---
