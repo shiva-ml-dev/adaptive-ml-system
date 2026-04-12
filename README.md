@@ -41,26 +41,25 @@ It transforms a static ML model into a self-improving intelligent system suitabl
 
 ---
 
-🏗️ System Architecture
+```mermaid
+flowchart LR
 
-Real-Time Prediction Pipeline
+    %% Real-Time Prediction
+    A[User] --> B[Streamlit Dashboard]
+    B --> C[FastAPI Backend]
+    C --> D[ML Model]
+    D --> E[Prediction Output]
 
-User
-→ Streamlit Dashboard (UI)
-→ FastAPI Backend (API)
-→ Machine Learning Model
-→ Prediction Output
+    %% Monitoring Pipeline
+    D --> F[Prediction Logs]
+    F --> G[Performance Monitoring]
+    G --> H[Data Drift Detection]
+    H --> I[Automated Retraining]
+    I --> J[Model Deployment]
 
----
-
-Monitoring & Retraining Pipeline
-
-Prediction Logs (CSV / Database)
-→ Performance Monitoring (Accuracy Tracking)
-→ Data Drift Detection
-→ Automated Retraining Pipeline
-→ Updated Model Deployment
-→ Integrated back into FastAPI API
+    %% Feedback Loop
+    J --> D
+```
 
 ---
 
