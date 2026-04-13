@@ -43,7 +43,7 @@ It transforms a static ML model into a self-improving intelligent system suitabl
 
 ## 🧠 System Architecture
 
-![Adaptive ML System](adaptive-ml-system.png)
+![Adaptive ML System](adaptive-ml-system.drawio.png)
 
 ### Real-Time Prediction Pipeline
 User → Streamlit → FastAPI → ML Model → Predictions
