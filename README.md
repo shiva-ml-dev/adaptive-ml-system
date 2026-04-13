@@ -1,6 +1,6 @@
 🚀 Adaptive ML Monitoring & Automatic Retraining System
 
-A production-ready self-improving ML system with real-time monitoring, drift detection, and automated retraining.
+A production-level adaptive ML system with real-time monitoring, drift detection, and automated retraining.
 
 ![Python](https://img.shields.io/badge/Python-3.10-blue)
 ![FastAPI](https://img.shields.io/badge/FastAPI-Backend-green)
