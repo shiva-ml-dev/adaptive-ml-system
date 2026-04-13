@@ -41,13 +41,15 @@ It transforms a static ML model into a self-improving intelligent system suitabl
 
 ---
 
-## 🏗️ System Architecture
+## 🧠 System Architecture
+
+![Adaptive ML System](adaptive-ml-system.png)
 
 ### Real-Time Prediction Pipeline
-User → Streamlit Dashboard (UI) → FastAPI Backend (API) → Machine Learning Model → Prediction Output
+User → Streamlit → FastAPI → ML Model → Predictions
 
 ### Monitoring & Retraining Pipeline
-Prediction Logs (CSV / Database) → Performance Monitoring (Accuracy Tracking) → Data Drift Detection → Automated Retraining Pipeline → Updated Model Deployment → Integrated back into FastAPI API
+Logs → Scheduler → Monitoring → Drift → Retraining → Updated Model
 
 ---
 
