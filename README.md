@@ -65,16 +65,20 @@ Logs → Scheduler → Monitoring → Drift → Retraining → Updated Model
 
 ---
 
-## 📊 Dashboard Demo
-
-### Latest Data
-![Latest Data](screenshots/dashboard.png)
-
-### Accuracy Monitoring
+### 🎯 Accuracy
 ![Accuracy](screenshots/accuracy.png)
 
-### Live Prediction
-![Prediction](screenshots/prediction.png)
+### 📈 Accuracy Graph
+![Accuracy Graph](screenshots/accuracy_graph.png)
+
+### 🔴 Drift Status
+![Drift Status](screenshots/drift_status.png)
+
+### ✅ Before vs After
+![Before After](screenshots/before_after.png)
+
+### ⚡ Live Prediction
+![Live Prediction](screenshots/live_prediction.png)
 
 ---
 
