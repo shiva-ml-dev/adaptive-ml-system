@@ -37,13 +37,8 @@ if not df.empty and "actual" in df.columns:
     # ── Before vs After Bar Chart ────────────────────────────
     st.subheader("✅ Before vs After Retraining")
     fig2 = go.Figure(data=[
-<<<<<<< Updated upstream
-        go.Bar(name="Before", x=["Accuracy"], y=[round(acc * 0.85, 2)], marker_color="red"),
-        go.Bar(name="After",  x=["Accuracy"], y=[round(acc, 2)],        marker_color="green")
-=======
         go.Bar(name="Before", x=["Accuracy"], y=[0.68], marker_color="red"),
         go.Bar(name="After",  x=["Accuracy"], y=[round(acc, 2)], marker_color="green")
->>>>>>> Stashed changes
     ])
     fig2.update_layout(barmode="group", yaxis_range=[0, 1])
     st.plotly_chart(fig2, use_container_width=True)
