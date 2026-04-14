@@ -1,20 +1,23 @@
 import pandas as pd
 
-def calculate_drift(train_path, new_path, threshold=0.1):
-    train = pd.read_csv(train_path)
-    new = pd.read_csv(new_path)
+def calculate_drift(train_path, new_path):
+    try:
+        df1 = pd.read_csv(train_path)
+        df2 = pd.read_csv(new_path)
 
-    drift_report = {}
+        drift_score = 0
 
-    for col in train.columns:
-        if train[col].dtype != 'object':  # numeric columns ಮಾತ್ರ
-            train_mean = train[col].mean()
-            new_mean = new[col].mean()
+        for col in df1.columns:
+            if col in df2.columns and df1[col].dtype != 'object':
+                diff = abs(df1[col].mean() - df2[col].mean())
+                drift_score += diff
 
-            diff = abs(train_mean - new_mean)
+        drift_score = drift_score / len(df1.columns)
 
-            drift_report[col] = diff
+        report = {"drift_score": drift_score}
 
-    drift_detected = any(diff > threshold for diff in drift_report.values())
+        return drift_score, report
 
-    return drift_detected, drift_report
+    except Exception as e:
+        print("Drift error:", e)
+        return None, None
