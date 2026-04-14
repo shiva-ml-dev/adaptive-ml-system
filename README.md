@@ -1,80 +1,84 @@
-🚀 Adaptive ML Monitoring & Automatic Retraining System
+# 🚀 Adaptive ML Monitoring & Auto-Retraining System
 
-A production-level adaptive ML system with real-time monitoring, drift detection, and automated retraining.
+> A production-level adaptive ML system with real-time monitoring, drift detection, and automated retraining — built as a fresher.
 
 ![Python](https://img.shields.io/badge/Python-3.10-blue)
 ![FastAPI](https://img.shields.io/badge/FastAPI-Backend-green)
 ![Streamlit](https://img.shields.io/badge/Streamlit-UI-red)
+![MLOps](https://img.shields.io/badge/MLOps-Production-orange)
 ![Status](https://img.shields.io/badge/Status-Deployed-success)
 
 ---
 
-🎯 Problem Statement
+## 🎯 Problem Statement
 
-Machine learning models deployed in real-world environments often experience performance degradation over time due to data drift and changing data patterns. This leads to reduced accuracy and unreliable predictions.
+Machine learning models deployed in real-world environments silently degrade over time due to data drift and changing patterns. Most teams discover this too late — after predictions have already become unreliable.
 
-Additionally, traditional ML systems lack continuous monitoring, performance tracking, and automated retraining, making it difficult to maintain model effectiveness without manual intervention.
-
----
-
-💡 Solution
-
-To solve this, I built a production-ready adaptive machine learning system that performs real-time predictions and continuously monitors model performance.
-
-The system logs predictions, tracks accuracy, detects data drift, and automatically retrains the model when performance drops — ensuring continuous improvement without manual effort.
+Traditional ML systems lack continuous monitoring, performance tracking, and automated retraining, requiring constant manual intervention to maintain model effectiveness.
 
 ---
 
-📌 Overview
+## 💡 Solution
 
-This project demonstrates an end-to-end ML system with real-time prediction, monitoring, drift detection, and automated retraining.
-
-It transforms a static ML model into a self-improving intelligent system suitable for real-world deployment.
+I built a production-ready adaptive ML system that:
+- Performs **real-time predictions** via FastAPI
+- **Monitors model accuracy** continuously
+- **Detects data drift** automatically
+- **Retrains the model** when performance drops
+- **Updates itself** — zero manual intervention required
 
 ---
 
-🔗 Live Demo
+## 🔗 Live Demo
 
-- Streamlit Dashboard: https://adaptive-ml-system-ptkbbf7euu2cd3mg55hn52.streamlit.app
-- FastAPI API: https://adaptive-ml-system-7.onrender.com
-- API Docs: https://adaptive-ml-system-7.onrender.com/docs
+| Service | Link |
+|---------|------|
+| 🖥️ Streamlit Dashboard | [Open Dashboard](https://adaptive-ml-system-ptkbbf7euu2cd3mg55hn52.streamlit.app) |
+| ⚡ FastAPI Backend | [Open API](https://adaptive-ml-system-7.onrender.com) |
+| 📄 API Docs | [Open Docs](https://adaptive-ml-system-7.onrender.com/docs) |
 
 ---
 
 ## 🧠 System Architecture
 
-![Adaptive ML System](adaptive-ml-system.drawio.png)
+![Adaptive ML System Architecture](adaptive-ml-system.drawio.png)
 
 ### Real-Time Prediction Pipeline
-User → Streamlit → FastAPI → ML Model → Predictions
+```
+User → Streamlit UI → FastAPI → ML Model → Predictions
+```
 
 ### Monitoring & Retraining Pipeline
-Logs → Scheduler → Monitoring → Drift → Retraining → Updated Model
+```
+Logs → Scheduler (60s) → Monitoring → Drift Detection → Retraining → Updated Model
+```
 
 ---
 
-🔄 How It Works
+## 🔄 How It Works
 
-1. User inputs data via Streamlit
-2. FastAPI returns prediction
-3. Predictions are logged
-4. Accuracy monitored continuously
-5. Drift detection checks data
-6. Low accuracy → retraining triggered
-7. Updated model deployed
+1. User inputs data via **Streamlit UI**
+2. **FastAPI** returns real-time prediction
+3. Predictions are **logged automatically**
+4. Accuracy is **monitored continuously**
+5. **Drift detection** checks for data changes
+6. Low accuracy → **retraining triggered automatically**
+7. **Updated model deployed** — no manual work needed
 
 ---
 
-### 🎯 Accuracy
+## 📊 Dashboard Demo
+
+### 🎯 Current Accuracy
 ![Accuracy](screenshots/accuracy.png)
 
-### 📈 Accuracy Graph
+### 📈 Accuracy Over Time
 ![Accuracy Graph](screenshots/accuracy_graph.png)
 
 ### 🔴 Drift Status
 ![Drift Status](screenshots/drift_status.png)
 
-### ✅ Before vs After
+### ✅ Before vs After Retraining
 ![Before After](screenshots/before_after.png)
 
 ### ⚡ Live Prediction
@@ -82,151 +86,104 @@ Logs → Scheduler → Monitoring → Drift → Retraining → Updated Model
 
 ---
 
-🤖 Automated Retraining System
+## 📈 Model Performance
 
-- Monitors model accuracy
-- Triggers retraining automatically
-- Deploys updated model
+| Metric | Score |
+|--------|-------|
+| Accuracy | 91% |
+| Precision | 89% |
+| Recall | 87% |
+| F1 Score | 88% |
 
----
+### Confusion Matrix
 
-📉 Data Drift Detection
-
-- Detects distribution changes
-- Uses statistical comparison
-- Ensures model reliability
-
----
-
-⏱️ Automated Monitoring (Scheduler)
-
-- Runs continuously
-- Checks performance
-- Triggers retraining
+| | Predicted 0 | Predicted 1 |
+|---|---|---|
+| **Actual 0** | 45 | 5 |
+| **Actual 1** | 6 | 44 |
 
 ---
 
-📊 Model Performance
+## ⚙️ Key Features
 
-- Accuracy: 91%
-- Precision: 89%
-- Recall: 87%
-- F1 Score: 88%
-
-Confusion Matrix
-
-| Predicted 0| Predicted 1
-Actual 0| 45| 5
-Actual 1| 6| 44
+| Feature | Description |
+|---------|-------------|
+| ⚡ Real-time Prediction | FastAPI serves live predictions |
+| 📊 Accuracy Monitoring | Continuous model health tracking |
+| 🔴 Drift Detection | Statistical comparison of data distributions |
+| 🔄 Auto Retraining | Triggered when accuracy drops below threshold |
+| ⏱️ Scheduler | Runs every 60 seconds automatically |
+| 🖥️ Live Dashboard | Streamlit monitoring dashboard |
 
 ---
 
-📈 System Performance
+## 🛠️ Tech Stack
 
-- Real-time predictions working via FastAPI
-- Continuous accuracy monitoring enabled
-- Drift detection identifies performance drop
-- Automated retraining triggered
-- End-to-end ML pipeline deployed successfully
+| Category | Technology |
+|----------|-----------|
+| Language | Python 3.10 |
+| ML | Scikit-learn, Pandas, NumPy |
+| Backend API | FastAPI |
+| Frontend UI | Streamlit |
+| Deployment | Render (API) + Streamlit Cloud |
+| Model | Random Forest Classifier |
 
 ---
 
 ## 🧠 Model Selection
 
-A Random Forest model was used due to its robustness, ability to handle non-linear patterns, and strong performance on tabular data. It provides reliable predictions with minimal overfitting, making it suitable for real-world production systems.
+A **Random Forest** model was chosen for its robustness, ability to handle non-linear patterns, and strong performance on tabular data. It provides reliable predictions with minimal overfitting — ideal for real-world production systems.
 
 ---
 
-## 🎯 Use Case
+## 📂 Project Structure
 
-- 🏭 Production ML Systems (MLOps)  
-  This system is designed for real-world production environments where machine learning models require continuous monitoring, drift detection, and automatic retraining to maintain performance over time.
-
----
-  
-⚙️ Features
-
-- Real-time prediction using FastAPI
-- Interactive Streamlit dashboard
-- Prediction logging (CSV-based tracking)
-- Continuous accuracy monitoring
-- Data drift detection mechanism
-- Automated model retraining
-- Scheduled performance checks
-- Production-ready ML pipeline
-
----
-
-🌟 Key Highlights
-
-- End-to-end ML system (UI + API + Monitoring)
-- Real-time predictions
-- Self-improving ML pipeline
-- Fully automated retraining system
-- Production deployment using Render and Streamlit
-
----
-
-🛠️ Tech Stack
-
-- Python
-- FastAPI
-- Streamlit
-- Scikit-learn
-- Pandas
-
----
-
-📂 Project Structure
-
+```
 adaptive-ml-system/
-│── app/
-│── dashboard/
-│── monitoring/
-│── retraining/
-│── data/
-│── models/
-│── logs/
-│── tests/
-│── scheduler.py
+│── app/              # FastAPI backend
+│── dashboard/        # Streamlit UI
+│── monitoring/       # Drift detection & accuracy tracking
+│── retraining/       # Auto-retraining pipeline
+│── data/             # Dataset
+│── models/           # Trained models
+│── logs/             # Prediction logs (CSV)
+│── tests/            # Unit tests
+│── scheduler.py      # 60s automated scheduler
 │── requirements.txt
+```
 
 ---
 
-📈 Results
+## 🌟 Key Highlights
 
-- Real-time prediction system working
-- Monitoring system active
-- Drift detection implemented
-- Automated retraining functional
-
----
-
-🔗 Live Demo (Quick Access)
-
-- Streamlit Dashboard:https://adaptive-ml-system-ptkbbf7euu2cd3mg55hn52.streamlit.app
-- FastAPI API: https://adaptive-ml-system-7.onrender.com
-- API Docs: https://adaptive-ml-system-7.onrender.com/docs
+- ✅ End-to-end ML system (UI + API + Monitoring + Retraining)
+- ✅ Self-improving ML pipeline — heals itself automatically
+- ✅ Production deployment on Render + Streamlit Cloud
+- ✅ Real-time drift detection and automated retraining
+- ✅ Built as a fresher — demonstrates production-level thinking
 
 ---
 
-▶️ Run Locally
+## ▶️ Run Locally
 
+```bash
 pip install -r requirements.txt
 python scheduler.py
 streamlit run dashboard/app.py
+```
 
 ---
 
-👨‍💻 Author
+## 👨‍💻 Author
 
-Shivashankar Kakanale
-Machine Learning Engineer
+**Shivashankar Kakanale**
+Machine Learning Engineer | Production-Ready ML Systems & APIs
 
-Actively seeking Machine Learning Internship and Entry-Level Opportunities
+> 🔍 Actively seeking **Machine Learning Internship** and **Entry-Level ML Engineer** opportunities in Bengaluru
 
-- GitHub: https://github.com/shiva-ml-dev
-- LinkedIn: https://www.linkedin.com/in/shivashankar-kakanale-2a337329a
-- Email: kakanaleshivashankar@gmail.com
-
+| | |
+|---|---|
+| 🐙 GitHub | [github.com/shiva-ml-dev](https://github.com/shiva-ml-dev) |
+| 💼 LinkedIn | [linkedin.com/in/shivashankar-kakanale](https://www.linkedin.com/in/shivashankar-kakanale-2a337329a) |
+| 📧 Email | kakanaleshivashankar@gmail.com |
 
