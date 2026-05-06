@@ -185,5 +185,5 @@ Machine Learning Engineer | Production-Ready ML Systems & APIs
 |---|---|
 | 🐙 GitHub | [github.com/shiva-ml-dev](https://github.com/shiva-ml-dev) |
 | 💼 LinkedIn | [linkedin.com/in/shivashankar-kakanale](https://www.linkedin.com/in/shivashankar-kakanale-2a337329a) |
-| 📧 Email | kakanaleshivashankar@gmail.com |
+| 📧 Email | kakanaleshivashankar0@gmail.com |
 
